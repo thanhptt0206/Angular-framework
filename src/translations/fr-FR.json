@@ -1,0 +1,21 @@
+{
+  "APP_NAME": "FSU2BU17",
+  "About": "A propos",
+  "Hello world !": "Bonjour le monde !",
+  "Home": "Accueil",
+  "Logged in as": "Connecté en tant que",
+  "Login": "Connexion",
+  "Logout": "Déconnexion",
+  "Password": "Mot de passe",
+  "Password is required": "Mot de passe requis",
+  "Username": "Identifiant",
+  "Username is required": "Identifiant requis",
+  "Username or password incorrect.": "Identifiant ou mot de passe incorrect.",
+  "Remember me": "Rester connecté",
+  "Version": "Version",
+  "COMMON_WMSG_TITLE": "Warning",
+  "WARNING_MSG_REDIRECT_PAGE": "Input information will be lost. Are you sure?",
+  "COMMON_DIALOG_OK_BUTTON": "OK",
+  "COMMON_DIALOG_CANCEL_BUTTON": "Cancel",
+  "COMMON_SMSG_TITLE": "Success"
+}

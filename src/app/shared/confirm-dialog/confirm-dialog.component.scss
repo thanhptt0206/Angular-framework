@@ -1,0 +1,27 @@
+.btn-ok-confirm{
+    display: flex;
+    justify-content: center;
+    button{
+        width: 30%;
+        background-color: skyblue;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        margin:0 10px;
+        padding: 10px 0;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+    }
+    .cancel{
+        background-color: #808080;
+    }
+}
+.content{
+    font-size: 1.125em;
+    text-align: center;
+    margin: 20px 0;
+}
+.header{
+    text-align: center;
+}

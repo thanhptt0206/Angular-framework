@@ -1,0 +1,58 @@
+.footer {
+    height: 100%;
+ }
+.mr-0 {
+    margin: 0;
+}
+.pd-0 {
+    padding: 0;
+ }
+.copyright {
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+.btn-scroll-top {
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+#myBtn {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 35px;
+    height: 35px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#myBtn span {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 0px;
+    top: 12px;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+#myBtn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#myBtn:hover span {
+    color: #fff;
+    top: 5px;
+}

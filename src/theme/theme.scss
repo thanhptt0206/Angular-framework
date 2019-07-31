@@ -1,0 +1,31 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+ @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body {
+    min-width: 1024px;
+    height: 100%;
+}
+  
+html {
+    padding-bottom: 0px;
+}
+app-root, app-shell, app-body {
+    display: block;
+    height: 100%;
+}
+ // Common template
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+app-header, app-body, app-footer {
+    width: 100%;
+}
+

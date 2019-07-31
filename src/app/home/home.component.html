@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="text-center">
+      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo" />
+      <span translate>WELCOME !</span>
+    </h1>
+
+    <h2>Demo Primeng</h2>
+    <button (click)="onShowHideButtonClick('primeng')" mat-raised-button>Show/Hide</button>
+    <div *ngIf="primeng" class="detail-demo">
+
+      <h4>Password</h4>
+      <input pPassword type="password" />
+
+      <h4>Dropdown</h4>
+      <p-dropdown [options]="cars" [(ngModel)]="selectedCar1" [style]="{'width':'150px'}" editable="true" placeholder="Select a Brand"></p-dropdown>
+      <p>Selected Car: {{selectedCar1 || 'none'}}</p>
+
+      <h4>File upload</h4>
+      <p-fileUpload multiple="multiple" accept="" customUpload="true" (uploadHandler)="myUploader($event)"></p-fileUpload>
+
+      <h4>Test regex</h4>
+      <form #formValidate="ngForm">
+        <div class="row">
+          <div class="col-3">
+            <input id="email" type="text" name="email" [(ngModel)]="email" pInputText [pKeyFilter]="emailRegex" [pValidateOnly]="true"
+              placeholder="Email">
+            <div class="error" *ngIf="formValidate.controls.email?.touched && !formValidate.controls.email?.valid" translate>Lỗi rùi bưởi</div>
+          </div>
+          <div class="col-3">
+            <input id="halfAlpha" type="text" name="halfAlpha" [(ngModel)]="halfAlpha" pInputText [pKeyFilter]="halfAlphaRegex" [pValidateOnly]="true"
+              placeholder="halfAlpha">
+            <div class="error" *ngIf="formValidate.controls.halfAlpha?.touched && !formValidate.controls.halfAlpha?.valid" translate>Lỗi rùi bưởi</div>
+          </div>
+          <div class="col-3">
+            <input id="cc" type="text" name="cc" [(ngModel)]="cc" pInputText [pKeyFilter]="ccRegex" [pValidateOnly]="true" placeholder="1234-1234-1234-1234">
+            <div class="error" *ngIf="formValidate.controls.cc?.touched && !formValidate.controls.cc?.valid" translate>Lỗi rùi bưởi</div>
+          </div>
+          <div class="col-3">
+            <input id="onlyNum" type="text" name="onlyNum" [(ngModel)]="onlyNum" pInputText [pKeyFilter]="onlyNumRegex" [pValidateOnly]="true"
+              placeholder="onlyNum">
+            <div class="error" *ngIf="formValidate.controls.onlyNum?.touched && !formValidate.controls.onlyNum?.valid" translate>Lỗi rùi bưởi</div>
+          </div>
+        </div>
+      </form>
+      <br />
+      <a target="_blank" rel="noopener noreferrer" href="https://www.primefaces.org/primeng/#/">Want more component and docs, go to this link</a>
+    </div>
+
+    <h2>Demo Angular Material</h2>
+    <button (click)="onShowHideButtonClick('material')" mat-raised-button>Show/Hide</button>
+    <div *ngIf="material" class="detail-demo">
+      <h4>Icon with badge</h4>
+      <mat-icon [matBadge]="numberNoti" matBadgeColor="warn">home</mat-icon>
+      <h4>Input text</h4>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input (input)="isInput=true" matInput placeholder="Favorite food" value="Sushi">
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </form>
+      <h4>Dialog</h4>
+      <span>Input something to Favorite food, then go to another component or click back browser</span>
+      <h4>SnackBar</h4>
+      <mat-form-field>
+        <input matInput value="Wow" placeholder="Message" #message>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput value="Fantasy baby!" placeholder="Action" #action>
+      </mat-form-field>
+      <button mat-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+      <br />
+      <a target="_blank" rel="noopener noreferrer" href="https://material.angular.io/components/categories">Want more component and docs, go to this link</a>
+    </div>
+
+    <h2>Dummy Data</h2>
+    <button [disabled]="commonService.disableButton" id="getAll" (click)="onGetAllClick()" mat-raised-button>Get all employees</button>
+    <button [disabled]="commonService.disableButton" id="add" (click)="onCreateNewClick()" color="primary" mat-raised-button>Add new employee</button>
+    <button [disabled]="commonService.disableButton" id="update" (click)="onUpdateClick()" color="accent" mat-raised-button>Update first employee</button>
+    <button [disabled]="commonService.disableButton" id="delete" (click)="onDeleteClick()" color="warn" mat-raised-button>Delete first employee</button>
+
+    <div *ngIf="employees && employees.length>0" class="detail-demo detail-emp">
+      <div *ngFor="let employee of employees">
+        ID:
+        <label>{{employee.id}}</label>
+        Name:
+        <label>{{employee.employee_name}}</label>
+        Age:
+        <label>{{employee.employee_age}}</label>
+        Salary:
+        <label>{{employee.employee_salary}}</label>
+      </div>
+    </div>
+
+    <!-- For test preview image -->
+    <!-- <div class="img">
+      <img id="imgPreview" src="" alt="" height="300px !important" />
+      <input id="imgInput" name="image" type="file" accept="image/*" (change)="isInput = true">
+    </div> -->
+  </div>
+</div>
